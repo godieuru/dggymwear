@@ -1,0 +1,67 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 5rem;
+  margin-top: 3rem;
+  background-color: white;
+  position: relative;
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  max-width: 100px;
+  height: auto;
+}
+
+.navbarLogo img {
+  width: 100%;
+  height: auto;
+}
+
+.navbarMenu {
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.navbarMenu li {
+  position: relative;
+}
+
+.navbarMenu a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.navbarMenu a:hover {
+  color: grey;
+}
+
+.navbarIcons {
+  display: flex;
+  align-items: center;
+}
+
+.navbarIcon {
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: black;
+}
+
+.navbarIcon:hover {
+  color: grey;
+}
+
+.dropdownWrapper {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+}

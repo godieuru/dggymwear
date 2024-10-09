@@ -1,0 +1,303 @@
+
+{
+    "store": {
+      "categories": {
+        "womens": {
+          "name": "Women's",
+          "products": [
+            {
+              "id": 1,
+              "name": "Women's Running Shoes",
+              "price": 99.99,
+              "description": "Lightweight running shoes for women, available in various sizes.",
+              "image": "/productimages/woman/running1.png",
+              "stock": 50
+            },
+            {
+              "id": 2,
+              "name": "Women's Yoga Pants",
+              "price": 49.99,
+              "description": "Comfortable and flexible yoga pants for women.",
+              "image": "/productimages/woman/yogapants.png",
+              "stock": 30
+            },
+            {
+              "id": 3,
+              "name": "Women's Sports Bra",
+              "price": 29.99,
+              "description": "Supportive sports bra for high-intensity workouts.",
+              "image": "/productimages/woman/sportbra.png",
+              "stock": 40
+            },
+            {
+              "id": 4,
+              "name": "Women's Training Jacket",
+              "price": 69.99,
+              "description": "Lightweight jacket for outdoor workouts.",
+              "image": "/productimages/woman/jacket.png",
+              "stock": 20
+            },
+            {
+              "id": 5,
+              "name": "Women's Tennis Skirt",
+              "price": 39.99,
+              "description": "Skirt with built-in shorts, perfect for tennis.",
+              "image": "/productimages/woman/tennisskirt.png",
+              "stock": 25
+            },
+            {
+              "id": 6,
+              "name": "Women's Hiking Boots",
+              "price": 119.99,
+              "description": "Durable boots for hiking and outdoor adventures.",
+              "image": "/productimages/woman/boots.png    ",
+              "stock": 15
+            },
+            {
+              "id": 7,
+              "name": "Women's Swimwear",
+              "price": 59.99,
+              "description": "Stylish and comfortable swimwear for summer.",
+              "image": "/productimages/woman/swim.png",
+              "stock": 35
+            },
+            {
+              "id": 8,
+              "name": "Women's Cycling Shorts",
+              "price": 34.99,
+              "description": "Padded cycling shorts for long rides.",
+              "image": "/productimages/woman/cyclingpants.png",
+              "stock": 28
+            },
+            {
+              "id": 9,
+              "name": "Women's Gym Tank Top",
+              "price": 24.99,
+              "description": "Breathable tank top for gym workouts.",
+              "image": "/productimages/woman/tanktop.png",
+              "stock": 45
+            },
+            {
+              "id": 10,
+              "name": "Women's Leggings",
+              "price": 44.99,
+              "description": "Stretchable leggings perfect for yoga or running.",
+              "image": "/productimages/woman/leggings.png",
+              "stock": 50
+            }
+          ]
+        },
+        "mens": {
+          "name": "Men's",
+          "products": [
+            {
+              "id": 11,
+              "name": "Men's Training Shoes",
+              "price": 109.99,
+              "description": "Durable training shoes for various sports activities.",
+              "image": "/productimages/man/shoes.png",
+              "stock": 60
+            },
+            {
+              "id": 12,
+              "name": "Men's Joggers",
+              "price": 59.99,
+              "description": "Comfortable joggers for running and casual wear.",
+              "image": "/productimages/man/pants.png",
+              "stock": 35
+            },
+            {
+              "id": 13,
+              "name": "Men's Compression Shirt",
+              "price": 34.99,
+              "description": "Breathable compression shirt to enhance performance.",
+              "image": "/productimages/man/shirt.png",
+              "stock": 25
+            },
+            {
+              "id": 14,
+              "name": "Men's Training Shorts",
+              "price": 29.99,
+              "description": "Lightweight shorts for training and gym sessions.",
+              "image": "/productimages/man/short.png",
+              "stock": 40
+            },
+            {
+              "id": 15,
+              "name": "Men's Hoodie",
+              "price": 49.99,
+              "description": "Comfortable hoodie for everyday wear.",
+              "image": "/productimages/man/hoodie.png",
+              "stock": 50
+            },
+            {
+              "id": 16,
+              "name": "Men's Running Jacket",
+              "price": 69.99,
+              "description": "Windproof jacket ideal for running in any weather.",
+              "image": "/productimages/man/jacket.png",
+              "stock": 20
+            },
+            {
+              "id": 17,
+              "name": "Men's Swim Trunks",
+              "price": 39.99,
+              "description": "Stylish swim trunks for the beach or pool.",
+              "image": "/productimages/man/trunk.png",
+              "stock": 30
+            },
+            {
+              "id": 18,
+              "name": "Men's Hiking Boots",
+              "price": 119.99,
+              "description": "Rugged hiking boots for outdoor adventures.",
+              "image": "/productimages/man/mboots.png",
+              "stock": 15
+            },
+            {
+              "id": 19,
+              "name": "Men's Cycling Jersey",
+              "price": 49.99,
+              "description": "Breathable and comfortable cycling jersey.",
+              "image": "/productimages/man/cycling.png",
+              "stock": 25
+            },
+            {
+              "id": 20,
+              "name": "Men's Gym Tank Top",
+              "price": 24.99,
+              "description": "Breathable tank top for gym workouts.",
+              "image": "/productimages/man/tanktop.png",
+              "stock": 45
+            }
+          ]
+        },
+        "accessories": {
+          "name": "Accessories",
+          "products": [
+            {
+              "id": 21,
+              "name": "Water Bottle",
+              "price": 19.99,
+              "description": "Reusable water bottle with a spill-proof design.",
+              "image": "/productimages/accesories/bottle.png",
+              "stock": 100
+            },
+            {
+              "id": 22,
+              "name": "Gym Bag",
+              "price": 49.99,
+              "description": "Spacious and durable gym bag for all your sports gear.",
+              "image": "/productimages/accesories/bag.png",
+              "stock": 20
+            },
+            {
+              "id": 23,
+              "name": "Fitness Tracker",
+              "price": 79.99,
+              "description": "Monitor your steps, heart rate, and workouts with this fitness tracker.",
+              "image": "/productimages/accesories/trackers.png",
+              "stock": 15
+            },
+            {
+              "id": 24,
+              "name": "Yoga Mat",
+              "price": 29.99,
+              "description": "Non-slip yoga mat for your home and gym workouts.",
+              "image": "/productimages/accesories/yogamat.png",
+              "stock": 40
+            },
+            {
+              "id": 25,
+              "name": "Resistance Bands",
+              "price": 19.99,
+              "description": "Set of resistance bands for strength training.",
+              "image": "/productimages/accesories/bands.png",
+              "stock": 80
+            },
+            {
+              "id": 26,
+              "name": "Foam Roller",
+              "price": 29.99,
+              "description": "High-density foam roller for muscle recovery.",
+              "image": "/productimages/accesories/foam.png",
+              "stock": 35
+            },
+            {
+              "id": 27,
+              "name": "Jump Rope",
+              "price": 14.99,
+              "description": "Adjustable jump rope for cardio workouts.",
+              "image": "/productimages/accesories/rope.png",
+              "stock": 60
+            },
+            {
+              "id": 28,
+              "name": "Knee Support",
+              "price": 24.99,
+              "description": "Knee support brace for added protection during workouts.",
+              "image": "/productimages/accesories/knee.png",
+              "stock": 30
+            },
+            {
+              "id": 29,
+              "name": "Gym Gloves",
+              "price": 19.99,
+              "description": "Padded gloves for a better grip and comfort during weightlifting.",
+              "image": "/productimages/accesories/gloves.png",
+              "stock": 50
+            },
+            {
+              "id": 30,
+              "name": "Sweatband",
+              "price": 9.99,
+              "description": "Absorbent sweatband for your wrist or head.",
+              "image": "/productimages/accesories/sweat.png",
+              "stock": 70
+            },
+            {
+              "id": 31,
+              "name": "Weightlifting Belt",
+              "price": 49.99,
+              "description": "Durable weightlifting belt for added support.",
+              "image": "/productimages/accesories/belt.png",
+              "stock": 20
+            },
+            {
+              "id": 32,
+              "name": "Hand Grips",
+              "price": 14.99,
+              "description": "Hand grips to enhance your pull-up and lifting routine.",
+              "image": "/productimages/accesories/grips.png",
+              "stock": 50
+            },
+            {
+              "id": 33,
+              "name": "Speed Ladder",
+              "price": 29.99,
+              "description": "Speed and agility ladder for improving footwork.",
+              "image": "/productimages/accesories/speed.png",
+              "stock": 25
+            },
+            {
+              "id": 34,
+              "name": "Ankle Weights",
+              "price": 19.99,
+              "description": "Adjustable ankle weights for resistance training.",
+              "image": "/productimages/accesories/ankle.png",
+              "stock": 40
+            },
+            {
+              "id": 35,
+              "name": "Medicine Ball",
+              "price": 39.99,
+              "description": "Durable medicine ball for core strength training.",
+              "image": "/productimages/accesories/medicine.png",
+              "stock": 15
+            }
+          ]
+        }
+      }
+    }
+  }
+  
