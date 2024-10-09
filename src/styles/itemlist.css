@@ -1,4 +1,4 @@
-.item-list {
+.itemList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2rem;
@@ -6,7 +6,7 @@
   background-color: white;
 }
 
-.item-card {
+.itemCard {
   background-color: white;
   padding: 1.5rem;
   border: 1px solid lightgrey;
@@ -16,32 +16,32 @@
   text-align: center;
 }
 
-.item-card:hover {
+.itemCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
 }
 
-.item-image {
+.itemImage {
   width: 100%;
   height: auto;
   margin-bottom: 1rem;
   border-radius: 8px;
 }
 
-.item-name {
+.itemName {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
   color: black;
 }
 
-.item-price {
+.itemPrice {
   font-size: 1rem;
   color: grey;
   margin-bottom: 1rem;
 }
 
-.add-to-cart-btn {
+.addToCartBtn {
   padding: 0.75rem 1.5rem;
   background-color: black;
   color: white;
@@ -52,15 +52,15 @@
   transition: background-color 0.2s ease-in-out;
 }
 
-.add-to-cart-btn:hover {
+.addToCartBtn:hover {
   background-color: grey;
 }
 
-.item-list-container {
+.itemListContainer {
   padding: 2rem;
 }
 
-.greeting-text {
+.greetingText {
   color: black;
 }
 

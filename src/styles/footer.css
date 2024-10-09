@@ -13,10 +13,6 @@
     margin-bottom: 1rem;
   }
   
-  .footerLogo img {
-    width: 100px;
-    height: auto;
-  }
   
   .footerMenu {
     display: flex;
