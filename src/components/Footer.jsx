@@ -1,12 +1,12 @@
-// Footer.js
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/footer.css"; // Asegúrate de crear este archivo CSS
-import logo from "../assets/logo.png"; // Asegúrate de que el logo esté disponible
-
-// Importación de FontAwesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'; // Asegúrate de tener estos íconos instalados
+import "../styles/footer.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (

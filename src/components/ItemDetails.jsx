@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/itemdetails.css';
 
 const ItemDetails = ({ product }) => {
-  const shippingDetails = product.stock > 10 ? "3-5 Business Days" : "Envío calculado al finalizar la compra";
+  const shippingDetails = product.stock > 10 ? "3-5 Business Days" : "Shipping calculated at checkout";
 
   return (
     <div className="itemDetail">
