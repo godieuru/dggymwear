@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import emailjs from "emailjs-com";
 import "../styles/login.css";
@@ -101,7 +101,7 @@ const Login = ({ setUsername }) => {
         </form>
         <p>
           Don't have an account?{" "}
-          <a href="/signup" className="signupLink">Sign Up</a>
+          <Link to="/signup" className="signupLink">Sign Up</Link>
         </p>
       </div>
 
