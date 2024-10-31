@@ -72,25 +72,30 @@ input {
 .closeButton {
   padding: 12px;
   border: none;
-  margin-left: 0;
+  margin-right: 10px;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
+} 
 
 .loginButton {
   background-color: #28a745;
   color: white;
 }
 
+.resetButton2 {
+  background-color: #28a745;
+  color: white;
+}
+
+.resetButton2:hover {
+  background-color: #218838;
+}
+
 .loginButton:hover {
   background-color: #218838;
 }
 
-.resetButton {
-  background-color: #28a745;
-  color: white;
-}
 
 .closeButton {
   background-color: black;
@@ -117,3 +122,4 @@ input {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 300px;
 }
+

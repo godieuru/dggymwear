@@ -128,7 +128,7 @@ const Login = ({ setUsername }) => {
                 onChange={(e) => setEmailInput(e.target.value)}
               />
             </div>
-            <button onClick={handleForgotPassword} className="resetButton">Reset Password</button>
+            <button onClick={handleForgotPassword} className="resetButton2">Reset Password</button>
             <button onClick={() => setModalOpen(false)} className="closeButton">Cancel</button>
           </div>
         </div>
