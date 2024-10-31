@@ -12,7 +12,6 @@
   display: flex;
   align-items: center;
   max-width: 100px;
-  height: auto;
 }
 
 .navbarLogo img {
@@ -59,9 +58,19 @@
   color: grey;
 }
 
-.dropdownWrapper {
-  position: absolute;
-  width: 100%;
-  top: 100%;
-  left: 0;
+.logoutButton {
+  margin-left: 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
+
+.logoutButton:hover {
+  background-color: grey;
+}
+
+

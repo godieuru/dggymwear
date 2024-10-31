@@ -1,39 +1,39 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import productsData from "../assets/products.json";
-import ItemDetails from "../components/ItemDetails";
+import ItemDetail from "../components/ItemDetails";
+import { db } from "../firebase/config";
+import { doc, getDoc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
-  const { itemId } = useParams();
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchProduct = () => {
+    const fetchProduct = async () => {
       setLoading(true);
-      let foundProduct = null;
-      Object.keys(productsData.store.categories).forEach((category) => {
-        const categoryProducts =
-          productsData.store.categories[category]?.products || [];
-        const productMatch = categoryProducts.find(
-          (p) => p.id === parseInt(itemId)
-        );
-        if (productMatch) foundProduct = productMatch;
-      });
+      const productDetails = doc(db, "items", id);
 
-      setProduct(foundProduct);
-      setLoading(false);
+      try {
+        const docSnap = await getDoc(productDetails);
+        if (docSnap.exists()) {
+          setProduct({ id: docSnap.id, ...docSnap.data() });
+        }
+      } catch (error) {
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchProduct();
-  }, [itemId]);
+  }, [id]);
 
   return (
     <div>
       {loading ? (
         <p>Loading product details...</p>
       ) : product ? (
-        <ItemDetails product={product} />
+        <ItemDetail product={product} />
       ) : (
         <p>Product not found.</p>
       )}

@@ -1,26 +1,24 @@
 import React from "react";
-import cart from "../assets/cart.svg";
+import { useCartContext } from "../components/CartContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import "../styles/cartwidget.css";
 
-export const CartWidget = () => {
+const CartWidget = () => {
+  const { cart } = useCartContext();
+
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+
   return (
-    <>
-      <img
-        src={cart}
-        alt="cart"
-        style={{ width: 30, padding: "15px 0 15px 15px" }}
-      />
-      <span
-        style={{
-          width: 30,
-          borderRadius: "50%",
-          backgroundColor: "#000",
-          color: "#fff",
-          fontWeight: "bold",
-          textAlign: "center",
-        }}
-      >
-        5
-      </span>
-    </>
+    <div className="cartWidget">
+      {}
+      <Link to="/cart" className="navbarIcon">
+        <FontAwesomeIcon icon={faCartShopping} />
+        {totalItems > 0 && <span className="itemCount">{totalItems}</span>}
+      </Link>
+    </div>
   );
 };
+
+export default CartWidget;

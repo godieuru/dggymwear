@@ -1,0 +1,118 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 45px;
+  background-color: white;
+  height: 110vh;
+}
+
+.loginBox {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loginLogo {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  color: black;
+  line-height: 1.5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.inputField {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+label {
+  margin-bottom: 5px;
+  color: black;
+  font-weight: bold;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.forgotPassword {
+  text-align: right;
+  margin-bottom: 1rem;
+  color: black;
+  cursor: pointer;
+}
+
+.loginButton,
+.resetButton,
+.closeButton {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton {
+  background-color: #28a745;
+  color: white;
+}
+
+.loginButton:hover {
+  background-color: #218838;
+}
+
+.resetButton {
+  background-color: #28a745;
+  color: white;
+}
+
+.closeButton {
+  background-color: black;
+  color: white;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}

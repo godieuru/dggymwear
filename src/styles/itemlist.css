@@ -14,16 +14,18 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   text-align: center;
+  position: relative;
 }
 
 .itemCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .itemImage {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
   margin-bottom: 1rem;
   border-radius: 8px;
 }
@@ -56,11 +58,38 @@
   background-color: grey;
 }
 
-.itemListContainer {
-  padding: 2rem;
+.favoriteIconWrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
 }
 
-.greetingText {
+.favoriteIcon {
   color: black;
+  transition: color 0.3s ease;
 }
 
+.favoriteIcon.favorite {
+  color: red;
+}
+
+.banner {
+  background-image: url('../assets/banner.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 650px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.itemListContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.itemLink {
+  text-decoration: none;
+  color: inherit;
+}

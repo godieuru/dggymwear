@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/footer.css";
+import FooterLink from "./FooterLink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -12,24 +12,34 @@ const Footer = () => {
   return (
     <footer className="footer">
       <ul className="footerMenu">
-        <li>
-          <Link to="/about">About Us</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-        <li>
-          <Link to="/privacy">Privacy Policy</Link>
-        </li>
-        <li>
-          <Link to="/terms">Terms of Service</Link>
-        </li>
+        <FooterLink to="/aboutus" label="About Us" />
+        <FooterLink to="/contact" label="Contact" />
+        <FooterLink to="/privacy" label="Privacy Policy" />
+        <FooterLink to="/terms" label="Terms of Service" />
       </ul>
 
       <div className="footerIcons">
-        <FontAwesomeIcon icon={faFacebook} className="footerIcon" />
-        <FontAwesomeIcon icon={faTwitter} className="footerIcon" />
-        <FontAwesomeIcon icon={faInstagram} className="footerIcon" />
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faFacebook} className="footerIcon" />
+        </a>
+        <a
+          href="https://www.twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faTwitter} className="footerIcon" />
+        </a>
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faInstagram} className="footerIcon" />
+        </a>
       </div>
     </footer>
   );

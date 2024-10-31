@@ -1,53 +1,47 @@
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    background-color: #f8f8f8;
-    margin-top: 3rem;
-  }
-  
-  .footerLogo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  
-  
-  .footerMenu {
-    display: flex;
-    list-style: none;
-    font-weight: bold;
-    font-size: 1rem;
-    justify-content: center;
-    gap: 2rem;
-    margin: 1rem 0;
-  }
-  
-  .footerMenu a {
-    text-decoration: none;
-    color: black;
-    transition: color 0.3s ease;
-  }
-  
-  .footerMenu a:hover {
-    color: grey;
-  }
-  
-  .footerIcons {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-  }
-  
-  .footerIcon {
-    margin-left: 1.5rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: black;
-  }
-  
-  .footerIcon:hover {
-    color: grey;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  margin-top: 3rem;
+}
+
+.footerMenu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.footerMenu .footerLink,
+.footerLink a {
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerMenu .footerLink:hover,
+.footerLink a:hover {
+  color: grey;
+}
+
+.footerIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.footerIcon {
+  font-size: 1.5rem;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.footerIcon:hover {
+  color: grey;
+}

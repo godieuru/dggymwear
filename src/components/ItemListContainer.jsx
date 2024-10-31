@@ -1,51 +1,88 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import productsData from "../assets/products.json";
+import React, { useEffect, useState, useRef } from "react";
+import { useParams, useLocation } from "react-router-dom";
+import "../styles/itemlist.css";
 import ItemList from "../components/ItemList";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  query,
+  where,
+} from "firebase/firestore";
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = ({ username }) => {
   const { categoryId } = useParams();
+  const location = useLocation();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const itemListRef = useRef(null);
+
+  const categoryMapping = {
+    womens: "Women's",
+    mens: "Men's",
+    accessories: "Accessories",
+  };
 
   useEffect(() => {
-    const fetchProducts = () => {
+    const fetchProducts = async () => {
       setLoading(true);
-      setTimeout(() => {
-        let filteredProducts = [];
+      const db = getFirestore();
+      const itemsCollection = collection(db, "items");
+      const itemsQuery = categoryId
+        ? query(
+            itemsCollection,
+            where("category", "==", categoryMapping[categoryId.toLowerCase()])
+          )
+        : itemsCollection;
 
-        const normalizedCategoryId = categoryId?.toLowerCase();
-
-        if (productsData?.store?.categories) {
-          if (
-            normalizedCategoryId &&
-            productsData.store.categories[normalizedCategoryId]
-          ) {
-            const categoryProducts =
-              productsData.store.categories[normalizedCategoryId]?.products ||
-              [];
-            filteredProducts = [...categoryProducts];
-          } else {
-            Object.keys(productsData.store.categories).forEach((category) => {
-              const categoryProducts =
-                productsData.store.categories[category]?.products || [];
-              filteredProducts.push(...categoryProducts);
-            });
-          }
-        }
-
-        setProducts(filteredProducts);
+      try {
+        const querySnapshot = await getDocs(itemsQuery);
+        const fetchedProducts = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setProducts(fetchedProducts);
+      } catch {
+        setProducts([]);
+      } finally {
         setLoading(false);
-      }, 2000);
+      }
     };
 
     fetchProducts();
   }, [categoryId]);
 
+  const scrollToItems = () => {
+    if (itemListRef.current) {
+      itemListRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="itemListContainer">
-      <h1 className="greetingText">{greeting}</h1>
-      {loading ? <p>Loading products...</p> : <ItemList products={products} />}
+      {location.pathname === "/" && (
+        <>
+          <h1 className="greetingText">
+            {username ? `Welcome, ${username}!` : "Welcome!"}
+          </h1>
+          <div className="banner" onClick={scrollToItems} />
+        </>
+      )}
+      {loading ? (
+        <div className="loadingContainer">
+          <FontAwesomeIcon icon={faSpinner} spin />
+        </div>
+      ) : (
+        <div ref={itemListRef} className="productsContainer">
+          {products.length > 0 ? (
+            <ItemList products={products} />
+          ) : (
+            <p>No products available in this category.</p>
+          )}
+        </div>
+      )}
     </div>
   );
 };
