@@ -247,7 +247,7 @@ const CartPage = () => {
             )}
             <button
               type="button"
-              className="closeButton"
+              className="closeButton2"
               onClick={() => setShowOrderModal(false)}
             >
               Close

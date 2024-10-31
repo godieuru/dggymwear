@@ -133,3 +133,7 @@
 .closeButton:hover {
   background-color: grey;
 }
+
+.closeButton2 {
+  margin-left: 100px;
+}
