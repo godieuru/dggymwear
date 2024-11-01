@@ -7,8 +7,7 @@ import { collection, addDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
 
 const CartPage = () => {
-  const { cart, totalAmount, clearCart, removeFromCart, setCart } =
-    useCartContext();
+  const { cart, totalAmount, clearCart, removeFromCart, setCart } = useCartContext();
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [showOrderModal, setShowOrderModal] = useState(false);
   const [orderDetails, setOrderDetails] = useState(null);
@@ -35,7 +34,12 @@ const CartPage = () => {
 
   const handlePayment = async () => {
     if (paymentDetails.email !== paymentDetails.confirmEmail) {
-      alert("Email confirmation does not match!");
+      Swal.fire({
+        icon: "error",
+        title: "Email Mismatch",
+        text: "Email confirmation does not match!",
+        confirmButtonText: "OK",
+      });
       return;
     }
 
@@ -67,7 +71,21 @@ const CartPage = () => {
       clearCart();
       setShowPaymentModal(false);
       setShowOrderModal(true);
-    } catch (error) {}
+
+      Swal.fire({
+        icon: "success",
+        title: "Payment Successful",
+        text: "Your order has been placed successfully!",
+        confirmButtonText: "OK",
+      });
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Payment Error",
+        text: "There was an issue processing your payment. Please try again.",
+        confirmButtonText: "OK",
+      });
+    }
   };
 
   const handleChange = (e) => {
@@ -110,11 +128,7 @@ const CartPage = () => {
           <div className="cartItems">
             {cart.map((item) => (
               <div key={item.id} className="cartItem">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="cartItemImage"
-                />
+                <img src={item.image} alt={item.name} className="cartItemImage" />
                 <div className="cartItemDetails">
                   <h3 className="cartItemTitle">{item.name}</h3>
                   <p className="cartItemPrice">Price: ${item.price}</p>
@@ -131,10 +145,7 @@ const CartPage = () => {
           </div>
           <div className="cartTotal">
             <h3>Total: ${totalAmount.toFixed(2)}</h3>
-            <button
-              className="payButton"
-              onClick={() => setShowPaymentModal(true)}
-            >
+            <button className="payButton" onClick={() => setShowPaymentModal(true)}>
               Purchase
             </button>
             <button className="clearCartButton" onClick={() => clearCart()}>
@@ -229,9 +240,7 @@ const CartPage = () => {
               <>
                 <p>Your order number is: {orderDetails.orderId}</p>
                 <p>Order Date and Time: {orderDetails.orderDate}</p>
-                <p>
-                  Contact this number to coordinate delivery: (123) 456-7890
-                </p>
+                <p>Contact this number to coordinate delivery: (123) 456-7890</p>
                 <p>Items in your order:</p>
                 <ul>
                   {orderDetails.items.map((item) => (
